@@ -1,4 +1,4 @@
-Python script to organize folders \
+Python script to organize folders
 # To Run
 The enviroment variable GROQ_API_KEY needs to be set to a valid groq api key, (either through bash or through .env) after which, you can run
 ``` bash
