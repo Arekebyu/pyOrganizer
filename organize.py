@@ -45,5 +45,5 @@ def sortFolders(files: list[str], folders: list[str], instructions: str):
     result: SortingResult = folder_chain.invoke({"file_list": ingest, "user_request": instructions, "existing_folders": folders})
     
     for item in result.categorized_files:
-        os.mkdir(item.destination_folder)
+        os.mkdir(item.destination_folder, exists_ok=True)
         shutil.move(item.file_name, item.destination_folder+"/"+item.file_name)
